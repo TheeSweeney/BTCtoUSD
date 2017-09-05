@@ -1,12 +1,16 @@
 {
 	"manifest_version" : 2,
-	"name" : "Motivational Cat Extension",
+	"name" : "BTC to USD",
 	"description" : "This extenstion will show a random cat image to keep you motivated throughout the day",
 	"version" : "0.1",
 	"browser_action" :  {
 		"default_icon" : "icon.png",
 		"default_popup" : "popup.html",
 		"default_title" : "BTCtoUSD"
+	},
+
+	"background": {
+	  "scripts": ["conversion.js"]
 	},
 
 	"permissions" : [
