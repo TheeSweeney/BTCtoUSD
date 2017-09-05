@@ -14,7 +14,10 @@
 	},
 
 	"permissions" : [
-		"contextMenus"
+		"contextMenus",
+		"tabs",
+		"http://*/",
+        "https://*/"
 	],
 
 	"icons" : {

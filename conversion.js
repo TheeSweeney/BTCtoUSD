@@ -1,10 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-	var xhr = new XMLHttpRequest();
-	xhr.open("GET", "https://blockchain.info/ticker", false)
+
 
 	function BTCtoUSD(){
+		chrome.tabs.executeScript({
+			code: "console.log(window.getSelection() + 'stuff')"
+		})
+		
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", "https://blockchain.info/ticker", false)
 		xhr.send();
-		console.log(xhr)
+
+		console.log(JSON.parse(xhr.response).USD['15m'])
 	}
 
 	var title = "Convert BTC to USD";
